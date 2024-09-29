@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import {CssBaseline, Container } from '@mui/material';
 import Header from './components/Header';
@@ -145,9 +145,8 @@ function App() {
           <Header />
           <main style={{ flexGrow: 1 }}>
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/home" element={<Home />} />
               <Route path="/products" element={<Products />} />
-              <Route path="/" element={<Products products={products} />} />
               <Route path="/products/:id" element={<ProductDetails products={products} />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/subscribe" element={<Subscribe />} />
