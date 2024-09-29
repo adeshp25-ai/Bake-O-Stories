@@ -1,38 +1,131 @@
+:root {
+  --primary-brown: #8B4513;
+  --secondary-brown: #A0522D;
+  --light-yellow: #FFFACD;
+  --dark-yellow: #F0E68C;
+  --text-color: #333;
+}
+
+body {
+  background-color: var(--light-yellow);
+  color: var(--text-color);
+}
+
 .App {
-  text-align: center;
+  font-family: 'Georgia', serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px 0;
+  background-color: var(--primary-brown);
+  color: var(--light-yellow);
 }
 
-.App-link {
-  color: #61dafb;
+header h1 {
+  margin: 0;
+  padding-left: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: var(--secondary-brown);
+  transition: left 0.3s ease-in-out;
+  color: var(--light-yellow);
+}
+
+.side-menu.open {
+  left: 0;
+}
+
+.side-menu ul {
+  list-style-type: none;
+  padding: 20px;
+}
+
+.side-menu li {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.side-menu li:hover {
+  color: var(--dark-yellow);
+}
+
+.carousel {
+  background-color: var(--dark-yellow);
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.cake-frames {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.cake-frame {
+  width: 30%;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--dark-yellow);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cake-frame.expanded {
+  width: 100%;
+}
+
+.cake-frame img {
+  width: 100%;
+  height: auto;
+}
+
+.cake-frame p {
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  background-color: var(--secondary-brown);
+  color: var(--light-yellow);
+}
+
+.interactive-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: var(--primary-brown);
+  color: var(--light-yellow);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: var(--secondary-brown);
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+  padding: 20px;
+  background-color: var(--primary-brown);
+  color: var(--light-yellow);
 }
