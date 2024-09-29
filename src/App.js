@@ -145,7 +145,7 @@ function App() {
           <Header />
           <main style={{ flexGrow: 1 }}>
             <Routes>
-              <Route path="/home" element={<Home />} />
+              <Route path="/" element={<Home />} />
               <Route path="/products" element={<Products />} />
               <Route path="/products/:id" element={<ProductDetails products={products} />} />
               <Route path="/cart" element={<Cart />} />

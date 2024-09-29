@@ -14,7 +14,7 @@ const Header = () => {
           <Typography
             variant="h5"
             component={Link}
-            to="/home"
+            to="/"
             sx={{
               color: theme.palette.secondary.main,
               textDecoration: 'none',
@@ -30,7 +30,7 @@ const Header = () => {
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <Button
               component={Link}
-              to="/home"
+              to="/"
               sx={{
                 color: theme.palette.secondary.main,
                 mx: 1,
