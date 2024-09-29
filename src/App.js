@@ -10,6 +10,10 @@ import ProductDetails from './pages/ProductDetails';
 import Cart from './pages/Cart';
 import { CartProvider } from './CartContext';
 import chocolateCake from './assets/chocolate-cake.jpg';
+import vanillaCupcake from '../assets/vanilla-cupcake.jpg';
+import redVelvetCake from '../assets/red-velvet-cake.jpg';
+import lemonTart from '../assets/lemon-tart.jpg';
+import blueberryMuffin from '../assets/blueberry-muffin.jpg';
 import Subscribe from './pages/Subscribe';
 import Checkout from './pages/Checkout';
 
@@ -96,7 +100,7 @@ const products = [
     id: 2,
     name: 'Vanilla Cupcake',
     price: 3.99,
-    image: '/images/vanilla-cupcake.jpg',
+    image: vanillaCupcake,
     description: 'Light and fluffy vanilla cupcakes topped with creamy frosting.',
     nutrition: 'Calories: 200, Fat: 10g, Carbs: 30g, Protein: 2g',
     ingredients: ['Flour', 'Sugar', 'Butter', 'Eggs', 'Vanilla'],
@@ -105,7 +109,7 @@ const products = [
     id: 3,
     name: 'Red Velvet Cake',
     price: 30.99,
-    image: '/images/red-velvet-cake.jpg',
+    image: redVelvetCake,
     description: 'A classic red velvet cake with a hint of cocoa and cream cheese frosting.',
     nutrition: 'Calories: 500, Fat: 25g, Carbs: 65g, Protein: 6g',
     ingredients: ['Flour', 'Sugar', 'Cocoa', 'Butter', 'Eggs', 'Cream Cheese'],
@@ -114,7 +118,7 @@ const products = [
     id: 4,
     name: 'Lemon Tart',
     price: 15.99,
-    image: '/images/lemon-tart.jpg',
+    image: lemonTart,
     description: 'A tangy lemon tart with a buttery crust and smooth lemon filling.',
     nutrition: 'Calories: 350, Fat: 15g, Carbs: 45g, Protein: 3g',
     ingredients: ['Flour', 'Sugar', 'Butter', 'Lemon Juice', 'Eggs'],
@@ -123,7 +127,7 @@ const products = [
     id: 5,
     name: 'Blueberry Muffin',
     price: 2.99,
-    image: '/images/blueberry-muffin.jpg',
+    image: blueberryMuffin,
     description: 'Moist muffins bursting with fresh blueberries.',
     nutrition: 'Calories: 220, Fat: 8g, Carbs: 35g, Protein: 3g',
     ingredients: ['Flour', 'Sugar', 'Butter', 'Eggs', 'Blueberries'],
