@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/adeshp25-ai/Bake-O-Stories/static/css/main.85137642.css",
+    "main.js": "/adeshp25-ai/Bake-O-Stories/static/js/main.8dbce53d.js",
+    "static/js/453.ed3810f9.chunk.js": "/adeshp25-ai/Bake-O-Stories/static/js/453.ed3810f9.chunk.js",
+    "static/media/chocolate-cake.jpg": "/adeshp25-ai/Bake-O-Stories/static/media/chocolate-cake.5e0436c5a3c382828595.jpg",
+    "static/media/bakery-hero.jpg": "/adeshp25-ai/Bake-O-Stories/static/media/bakery-hero.a898fa4ec5884214e016.jpg",
+    "index.html": "/adeshp25-ai/Bake-O-Stories/index.html",
+    "main.85137642.css.map": "/adeshp25-ai/Bake-O-Stories/static/css/main.85137642.css.map",
+    "main.8dbce53d.js.map": "/adeshp25-ai/Bake-O-Stories/static/js/main.8dbce53d.js.map",
+    "453.ed3810f9.chunk.js.map": "/adeshp25-ai/Bake-O-Stories/static/js/453.ed3810f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.85137642.css",
+    "static/js/main.8dbce53d.js"
+  ]
+}
