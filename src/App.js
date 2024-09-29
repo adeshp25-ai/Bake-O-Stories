@@ -10,10 +10,10 @@ import ProductDetails from './pages/ProductDetails';
 import Cart from './pages/Cart';
 import { CartProvider } from './CartContext';
 import chocolateCake from './assets/chocolate-cake.jpg';
-import vanillaCupcake from '../assets/vanilla-cupcake.jpg';
-import redVelvetCake from '../assets/red-velvet-cake.jpg';
-import lemonTart from '../assets/lemon-tart.jpg';
-import blueberryMuffin from '../assets/blueberry-muffin.jpg';
+import vanillaCupcake from './assets/vanilla-cupcake.jpg';
+import redVelvetCake from './assets/red-velvet-cake.jpg';
+import lemonTart from './assets/lemon-tart.jpg';
+import blueberryMuffin from './assets/blueberry-muffin.jpg';
 import Subscribe from './pages/Subscribe';
 import Checkout from './pages/Checkout';
 
