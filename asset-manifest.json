@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Bake-O-Stories/static/css/main.85137642.css",
-    "main.js": "/Bake-O-Stories/static/js/main.1a89c1b5.js",
+    "main.js": "/Bake-O-Stories/static/js/main.e8177df4.js",
     "static/js/453.ed3810f9.chunk.js": "/Bake-O-Stories/static/js/453.ed3810f9.chunk.js",
     "static/media/chocolate-cake.jpg": "/Bake-O-Stories/static/media/chocolate-cake.5e0436c5a3c382828595.jpg",
     "static/media/lemon-tart.jpg": "/Bake-O-Stories/static/media/lemon-tart.e963022feebcd5b5d939.jpg",
@@ -11,11 +11,11 @@
     "static/media/bakery-hero.jpg": "/Bake-O-Stories/static/media/bakery-hero.a898fa4ec5884214e016.jpg",
     "index.html": "/Bake-O-Stories/index.html",
     "main.85137642.css.map": "/Bake-O-Stories/static/css/main.85137642.css.map",
-    "main.1a89c1b5.js.map": "/Bake-O-Stories/static/js/main.1a89c1b5.js.map",
+    "main.e8177df4.js.map": "/Bake-O-Stories/static/js/main.e8177df4.js.map",
     "453.ed3810f9.chunk.js.map": "/Bake-O-Stories/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.85137642.css",
-    "static/js/main.1a89c1b5.js"
+    "static/js/main.e8177df4.js"
   ]
 }
