@@ -4,18 +4,14 @@ import { useNavigate } from 'react-router-dom';
 import { useCart } from '../CartContext';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements, CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
+import { db } from '../firebase';
+import { collection, addDoc } from 'firebase/firestore';
 
 const stripePromise = loadStripe('your-publishable-key-here');
 
-const CheckoutForm = () => {
+const CheckoutForm = ({ finalPrice, orderDetails }) => {
   const stripe = useStripe();
   const elements = useElements();
-  const { cart } = useCart();
-
-  const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
-  const calculateTaxes = () => (totalPrice * 0.1).toFixed(2);
-  const calculateShipping = () => (5.00).toFixed(2);
-  const finalPrice = (parseFloat(totalPrice) + parseFloat(calculateTaxes()) + parseFloat(calculateShipping())).toFixed(2);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -34,6 +30,8 @@ const CheckoutForm = () => {
       console.error(result.error.message);
     } else if (result.paymentIntent.status === 'succeeded') {
       alert('Payment successful!');
+      // Here you could call a function to save the order to Firebase
+      saveOrderToFirebase(orderDetails);
     }
   };
 
@@ -47,8 +45,17 @@ const CheckoutForm = () => {
   );
 };
 
+const saveOrderToFirebase = async (orderDetails) => {
+  try {
+    await addDoc(collection(db, "orders"), orderDetails);
+    console.log("Order saved to Firebase");
+  } catch (error) {
+    console.error("Error saving order to Firebase: ", error);
+  }
+};
+
 const Checkout = () => {
-  const { cart } = useCart();
+  const { cart, clearCart } = useCart();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
@@ -63,6 +70,37 @@ const Checkout = () => {
   const calculateTaxes = () => (totalPrice * 0.1).toFixed(2);
   const calculateShipping = () => (5.00).toFixed(2);
   const finalPrice = (parseFloat(totalPrice) + parseFloat(calculateTaxes()) + parseFloat(calculateShipping())).toFixed(2);
+
+  const handleReserve = async () => {
+    const orderDetails = {
+      name,
+      email,
+      phone,
+      address,
+      city,
+      state,
+      zipCode,
+      deliveryDate,
+      cart: cart.map(item => ({
+        id: item.id,
+        name: item.name,
+        quantity: item.quantity,
+        price: item.price
+      })),
+      totalPrice: finalPrice,
+      timestamp: new Date()
+    };
+
+    try {
+      await saveOrderToFirebase(orderDetails);
+      clearCart(); // Clear the cart after successful reservation
+      alert("Order reserved successfully!");
+      navigate('/'); // Navigate to home page or order confirmation page
+    } catch (error) {
+      console.error("Error reserving order: ", error);
+      alert("Failed to reserve order. Please try again.");
+    }
+  };
 
   return (
     <Container maxWidth="lg" sx={{ my: 8 }}>
@@ -125,9 +163,16 @@ const Checkout = () => {
               </Table>
             </TableContainer>
 
+            <Button variant="contained" color="secondary" onClick={handleReserve} sx={{ mt: 2, mb: 2 }}>
+              Reserve Order
+            </Button>
+
             {/* Stripe Payment Form */}
             <Elements stripe={stripePromise}>
-              <CheckoutForm />
+              <CheckoutForm finalPrice={finalPrice} orderDetails={{
+                name, email, phone, address, city, state, zipCode, deliveryDate,
+                cart, totalPrice: finalPrice, timestamp: new Date()
+              }} />
             </Elements>
 
           </Paper>
