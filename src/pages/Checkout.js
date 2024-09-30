@@ -39,7 +39,7 @@ const CheckoutForm = ({ finalPrice, orderDetails }) => {
     <form onSubmit={handleSubmit}>
       <CardElement options={{ style: { base: { fontSize: '16px', color: '#424770' } } }} />
       <Button variant="contained" color="primary" type="submit" disabled={!stripe} sx={{ mt: 3 }}>
-        Pay ${finalPrice}
+        Pay ₹{finalPrice}
       </Button>
     </form>
   );
@@ -140,24 +140,24 @@ const Checkout = () => {
                     <TableRow key={item.id}>
                       <TableCell>{item.name}</TableCell>
                       <TableCell align="right">{item.quantity}</TableCell>
-                      <TableCell align="right">${(item.price * item.quantity).toFixed(2)}</TableCell>
+                      <TableCell align="right">₹{(item.price * item.quantity).toFixed(2)}</TableCell>
                     </TableRow>
                   ))}
                   <TableRow>
                     <TableCell colSpan={2}>Subtotal</TableCell>
-                    <TableCell align="right">${totalPrice}</TableCell>
+                    <TableCell align="right">₹{totalPrice}</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell colSpan={2}>Taxes</TableCell>
-                    <TableCell align="right">${calculateTaxes()}</TableCell>
+                    <TableCell align="right">₹{calculateTaxes()}</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell colSpan={2}>Shipping</TableCell>
-                    <TableCell align="right">${calculateShipping()}</TableCell>
+                    <TableCell align="right">₹{calculateShipping()}</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell colSpan={2}><strong>Total</strong></TableCell>
-                    <TableCell align="right"><strong>${finalPrice}</strong></TableCell>
+                    <TableCell align="right"><strong>₹{finalPrice}</strong></TableCell>
                   </TableRow>
                 </TableBody>
               </Table>

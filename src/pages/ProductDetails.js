@@ -24,7 +24,7 @@ const ProductDetails = ({ products }) => {
           </Grid>
           <Grid item xs={12} md={6}>
             <Typography variant="h4" gutterBottom>{product.name}</Typography>
-            <Typography variant="h5" color="primary" gutterBottom>Price: ${product.price.toFixed(2)}</Typography>
+            <Typography variant="h5" color="primary" gutterBottom>Price: ₹{product.price.toFixed(2)}</Typography>
             <Typography variant="body1" sx={{ mt: 2 }}>{product.description}</Typography>
 
             <Box sx={{ mt: 4 }}>

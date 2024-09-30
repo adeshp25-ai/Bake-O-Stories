@@ -19,13 +19,13 @@ const Footer = () => {
               Contact Us
             </Typography>
             <Typography variant="body2">
-              123 Bakery Street, Sweetville, CA 90210
+              123 Bakery Street, Pune, MH 411004
             </Typography>
             <Typography variant="body2">
               Email: info@bake-o-stories.com
             </Typography>
             <Typography variant="body2">
-              Phone: +1 (555) 123-4567
+              Phone: 999-999-9999
             </Typography>
           </Grid>
           <Grid item xs={12} sm={4}>

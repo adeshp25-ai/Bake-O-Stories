@@ -90,7 +90,7 @@ const products = [
   {
     id: 1,
     name: 'Chocolate Cake',
-    price: 25.99,
+    price: 600,
     image: chocolateCake,
     description: 'A rich and moist chocolate cake with a velvety texture.',
     nutrition: 'Calories: 450, Fat: 20g, Carbs: 60g, Protein: 5g',
@@ -99,7 +99,7 @@ const products = [
   {
     id: 2,
     name: 'Vanilla Cupcake',
-    price: 3.99,
+    price: 150,
     image: vanillaCupcake,
     description: 'Light and fluffy vanilla cupcakes topped with creamy frosting.',
     nutrition: 'Calories: 200, Fat: 10g, Carbs: 30g, Protein: 2g',
@@ -108,7 +108,7 @@ const products = [
   {
     id: 3,
     name: 'Red Velvet Cake',
-    price: 30.99,
+    price: 700,
     image: redVelvetCake,
     description: 'A classic red velvet cake with a hint of cocoa and cream cheese frosting.',
     nutrition: 'Calories: 500, Fat: 25g, Carbs: 65g, Protein: 6g',
@@ -117,7 +117,7 @@ const products = [
   {
     id: 4,
     name: 'Lemon Tart',
-    price: 15.99,
+    price: 500,
     image: lemonTart,
     description: 'A tangy lemon tart with a buttery crust and smooth lemon filling.',
     nutrition: 'Calories: 350, Fat: 15g, Carbs: 45g, Protein: 3g',
@@ -126,7 +126,7 @@ const products = [
   {
     id: 5,
     name: 'Blueberry Muffin',
-    price: 2.99,
+    price: 250,
     image: blueberryMuffin,
     description: 'Moist muffins bursting with fresh blueberries.',
     nutrition: 'Calories: 220, Fat: 8g, Carbs: 35g, Protein: 3g',

@@ -40,7 +40,7 @@ const Cart = () => {
                     {item.name}
                   </Typography>
                   <Typography variant="body1" color="text.secondary">
-                    ${item.price.toFixed(2)}
+                  ₹{item.price.toFixed(2)}
                   </Typography>
                   <Box sx={{ display: 'flex', alignItems: 'center', mt: 2 }}>
                     <IconButton onClick={() => removeFromCart(item.id)}>
@@ -84,7 +84,7 @@ const Cart = () => {
                     <TableRow key={item.id}>
                       <TableCell>{item.name}</TableCell>
                       <TableCell align="right">{item.quantity}</TableCell>
-                      <TableCell align="right">${(item.price * item.quantity).toFixed(2)}</TableCell>
+                      <TableCell align="right">₹{(item.price * item.quantity).toFixed(2)}</TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
@@ -96,7 +96,7 @@ const Cart = () => {
                 Total Items: {calculateTotalItems()}
               </Typography>
               <Typography variant="h6" gutterBottom color="primary">
-                Total Price: ${calculateTotalPrice()}
+                Total Price: ₹{calculateTotalPrice()}
               </Typography>
               <Button component={Link} to="/checkout" variant="contained" color="primary">
                 Proceed to Checkout
