@@ -26,8 +26,13 @@ const Cart = () => {
           Your cart is empty. Start adding some delicious treats!
         </Typography>
       ) : (
-        <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-          <Grid container spacing={4} sx={{ flexGrow: 1 }}>
+        <Box sx={{ 
+          display: 'flex', 
+          flexDirection: { xs: 'column', md: 'row' },
+          alignItems: { xs: 'center', md: 'flex-start' },
+          justifyContent: 'space-between'
+        }}>
+          <Grid container spacing={4} sx={{ flexGrow: 1, mb: { xs: 4, md: 0 } }}>
             {cart.map((item) => (
               <Grid item key={item.id} xs={12} sm={6} md={4}>
                 <Paper elevation={3} sx={{ p: 2, borderRadius: '12px', overflow: 'hidden' }}>
@@ -55,9 +60,9 @@ const Cart = () => {
 
           <Box
             sx={{
-              width: '300px',
-              ml: 4,
-              position: 'sticky',
+              width: { xs: '100%', md: '300px' },
+              ml: { xs: 0, md: 4 },
+              position: { xs: 'static', md: 'sticky' },
               top: '100px',
               p: 3,
               bgcolor: 'secondary.light',
